@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: prometeus-service
+spec:
+  type: NodePort
+  selector:
+    env: prom-metrics
+  ports:
+  - port: 9090
+    targetPort: 9090
+    nodePort: 31003
+    
+
+
